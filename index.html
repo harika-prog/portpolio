@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="profile-summary">
+                <div class="avatar-placeholder">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <h2 id="profile-name">Your Name</h2>
+                <p id="profile-role">Job Title</p>
+            </div>
+
+            <ul class="nav-links">
+                <li class="active" data-tab="about">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Overview</span>
+                </li>
+                <li data-tab="experience">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>Experience</span>
+                </li>
+                <li data-tab="projects">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Projects</span>
+                </li>
+                <li data-tab="skills">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Skills</span>
+                </li>
+                <li data-tab="contact">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Contact</span>
+                </li>
+            </ul>
+
+            <div class="sidebar-footer">
+                <p>&copy; 2024 Portfolio</p>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="breadcrumbs">
+                    <span class="breadcrumb-item">Dashboard</span>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-current" id="current-section">Overview</span>
+                </div>
+                <div class="status-indicator">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Available for work</span>
+                </div>
+            </header>
+
+            <div class="content-display" id="content-display">
+                <!-- Content injected via JavaScript -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-container">
+        <!-- Floating Action Button -->
+        <button id="chatbot-toggle" class="chatbot-toggle">
+            <i class="fa-solid fa-message"></i>
+        </button>
+
+        <!-- Chat Window -->
+        <div class="chat-window" id="chat-window">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <i class="fa-solid fa-robot"></i>
+                    <span>Portfolio Assistant</span>
+                </div>
+                <button id="chat-close" class="chat-close-btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot-message">
+                    Hi! I'm an AI assistant trained on this portfolio. Ask me anything about my experience, skills, or
+                    projects!
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Ask a question..." autocomplete="off">
+                <button id="chat-send">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
