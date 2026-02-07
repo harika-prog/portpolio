@@ -1,0 +1,19 @@
+# System Files
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
+*.log
+
+# Environment Variables (even though API key is in JS for this demo, good practice)
+.env
+.env.local
+
+# Build
+dist/
+build/
+
+# Workshop specific
+extract_pdf.py
+resume.pdf
